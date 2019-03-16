@@ -28,9 +28,15 @@
 
 ### Custom
 
+# Environment variables (but keep the example)
+.env
+
 # Private notes
 LOCAL-NOTES.md
 
 # Finder junk
 .DS_Store
 **/.DS_Store
+
+# Project metadata
+.idea
