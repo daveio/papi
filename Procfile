@@ -1,1 +1,1 @@
-server: bin/rails server -b 127.0.0.1 -p 3301
+web: bin/rails server -b 0.0.0.0 -p 3000

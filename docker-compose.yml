@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      args:
+        RAILS_ENV: development
+    volumes:
+      - .:/papi
+    ports:
+      - "3331:3000"
