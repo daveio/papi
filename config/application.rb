@@ -36,7 +36,7 @@ module Papi
       end
     end
 
-    config.secret_key_base = ENV['PAPI_SECRET_KEY_BASE']
+    config.secret_key_base = ENV['RAILS_SECRET_KEY_BASE']
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.

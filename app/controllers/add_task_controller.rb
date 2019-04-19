@@ -13,7 +13,7 @@ class AddTaskController < ApplicationController
     req_raw_priority = params['optP']
     req_priority = 4 - req_raw_priority[1].to_i
     @client = Todoist::Client.create_client_by_token(
-      ENV['PAPI_TODOIST_API_KEY']
+      ENV['PAPI_ADDTASK_TODOIST_API_KEY']
     )
     resp = if validation_ok(req_name, req_email, req_title,
                             req_due, req_raw_priority)
@@ -44,7 +44,7 @@ class AddTaskController < ApplicationController
 
   def captcha_ok(client_response)
     r = RestClient.post('https://www.google.com/recaptcha/api/siteverify',
-                        secret: ENV['PAPI_RECAPTCHA_SECRET'],
+                        secret: ENV['PAPI_ADDTASK_RECAPTCHA_SECRET'],
                         response: client_response)
     if r.code == 200
       JSON.parse(r)['success']
