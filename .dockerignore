@@ -1,0 +1,2 @@
+# env should be set up manually when deployed with Docker
+.env
