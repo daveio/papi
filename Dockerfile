@@ -1,7 +1,5 @@
-FROM ruby:2.6-alpine
+FROM ruby:2.7.0-alpine3.11
 ARG RAILS_ENV=production
-RUN apk update
-RUN apk upgrade
 RUN apk add --no-cache build-base gcc wget git --virtual deps-build-common
 RUN apk add --no-cache sqlite-dev sqlite --virtual deps-sqlite
 RUN apk add --no-cache postgresql-client postgresql-dev --virtual deps-postgres
